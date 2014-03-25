@@ -5,9 +5,9 @@ suitable = File.readlines('nl.dic')
 
 amount = 4
 keyspace = suitable.length ** amount
-guesses_per_second = 1.0 / 1_000_000
+guesses_per_second = 1_000_000
 seconds_in_year = 365 * 24 * 60 * 60
-years_required = keyspace  * guesses_per_second / seconds_in_year
+years_required = keyspace  / guesses_per_second / seconds_in_year
 
 puts "Suitable passwords: #{suitable.length}"
 puts "Entropy for #{amount} words: 2^#{Math.log2(keyspace)}"
