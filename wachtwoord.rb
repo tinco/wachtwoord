@@ -12,4 +12,4 @@ years_required = keyspace  * guesses_per_second / seconds_in_year
 puts "Suitable passwords: #{suitable.length}"
 puts "Entropy for #{amount} words: 2^#{Math.log2(keyspace)}"
 puts "Years required at 1 million guesses/second: #{years_required.round}"
-puts "Password: #{3.times.map{suitable.sample}.join('')}"
+puts "Password: #{amount.times.map{suitable.sample}.join('')}"
